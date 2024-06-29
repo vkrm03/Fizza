@@ -1,0 +1,129 @@
+.center-div {
+    display: flex;
+    justify-content: center;
+}
+
+.text {
+    text-align: center;
+    font-size: 1.8em;
+    font-weight: 500;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    line-height: 0.1em;
+    border-bottom: 1px solid #2f2f2f; 
+    line-height: 0.1em;
+    margin: 20px 0 20px;
+}
+.text span {
+    background:#fff; 
+    padding:0 10px;
+}
+.card {
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+}
+
+.card img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.card h2 {
+    font-size: 1.3em;
+    margin-top: 0;
+    color: #333;
+}
+
+.card p {
+    font-size: 1em;
+    color: #777;
+    margin: 10px 0;
+}
+.card button {
+    font-family: "Noto Sans", sans-serif;
+    border-radius: 5%;
+    background-color: #ff6347;
+    color: white;
+    border: none;
+    padding: 1px 10px;
+    font-size: 0.8em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.card button:hover {
+    background-color: #5b251a;
+}
+
+.details {
+    margin-bottom: 20px;
+    margin-top: 20px;   
+    width: 1300px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 60px;
+}
+
+@media (min-width: 600px) and (max-width: 900px) {
+    .details {
+        width: 600px;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 40px;
+    }
+    .text {
+        font-size: 1.2em;
+    }
+    .card {
+        padding: 10px;
+    }
+
+    .card h2 {
+        font-size: 0.6em;
+    }
+    .card button {
+        font-size: 0.4em;
+    }
+    
+    .card p {
+        font-size: 0.4em;
+    }
+    .card img {
+        width: 60px;
+        height: 60px;
+    }
+
+}
+@media (min-width: 200px) and (max-width: 600px) {
+    .details {
+        width: 400px;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    } 
+    .text {
+        font-size: 1em;
+        margin-bottom: 0px;
+    }
+    .card {
+        padding: 10px;
+    }
+
+    .card h2 {
+        font-size: 0.6em;
+    }
+    .card button {
+        font-size: 0.2em;
+    }
+    
+    .card p {
+        font-size: 0.4em;
+    }
+    .card img {
+        width: 60px;
+        height: 60px;
+    }
+
+}

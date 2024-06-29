@@ -1,0 +1,67 @@
+select {
+    width: 200px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f8f8f8;
+    font-size: 1em;
+    color: #333;
+    appearance: none;
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 4 5\'%3E%3Cpath fill=\'%23333\' d=\'M2 0L0 2h4zm0 5L0 3h4z\'/%3E%3C/svg%3E');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 8px 10px;
+}
+
+/* Remove default arrow in different browsers */
+select::-ms-expand {
+    display: none;
+}
+
+/* Style for the options */
+select option {
+    padding: 10px;
+    background-color: #fff;
+    color: #333;
+}
+
+/* Hover and focus effects */
+select:focus {
+    outline: none;
+    border-color: #007BFF;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+select:hover {
+    border-color: #007BFF;
+}
+.strike {
+    text-decoration: line-through;
+}
+
+@media (min-width: 600px) and (max-width: 900px) {
+    select {
+        width: 100px;
+        padding: 5px;
+        font-size: 0.6em;
+    }
+  }
+  @media (min-width: 400px) and (max-width: 600px) {
+    select {
+        width: 60px;
+        padding: 4px;
+        font-size: 0.6em;
+        background-size: 8px 6px;
+    }
+  }
+  @media (min-width: 200px) and (max-width: 400px) {
+    select {
+        width: 50px;
+        padding: 2px;
+        font-size: 0.3em;
+        background-size: 8px 6px;
+        background-position: right 6px center;
+        padding-left: 6px;
+    }
+  }
+  

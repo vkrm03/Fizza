@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Playwrite+IS:wght@100..400&family=Playwrite+PL:wght@100..400&family=Playwrite+VN:wght@100..400&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+header {
+    background-color: rgb(254, 254, 254);
+}
+
+.num-of-items {
+    position: absolute;
+    font-size: 0.6em;
+}
+
+nav li a {
+    text-decoration: none;
+    font-family: "Noto Sans", sans-serif;
+    font-size: 1.2em;
+    color: black;
+    transition: color 0.3s ease;
+    cursor: pointer;
+}
+
+nav li a:hover {
+    color: rgb(113, 113, 181);
+}
+
+.pizza-img {
+    height: 6em;
+    cursor: pointer;
+}
+
+.title {
+    font-family: "Playwrite PL", cursive;
+    color: black;
+    margin-left: 10px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+}
+.nav-right {
+    display: flex;
+    align-items: center;
+}
+
+.nav-right ul {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+
+@media (min-width: 200px) and (max-width: 600px) {
+    nav li a {
+        font-size: 0.4em;
+    }
+    .title {
+        font-size: 0.5em;
+    }
+    .pizza-img {
+        height: 3em;
+    }
+    .num-of-items {
+        padding-top: 5px;
+        font-size: 6px;
+
+    }
+}
+
+@media (min-width: 600px) and (max-width: 900px) {
+    nav li a {
+        font-size: 0.6em;
+    }
+    .title {
+        font-size: 0.6em;
+    }
+    .pizza-img {
+        height: 3em;
+    }
+    .num-of-items {
+        padding-top: 4px;
+    }
+}

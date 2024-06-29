@@ -1,0 +1,78 @@
+.content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 50px 20px;
+    background-color: #f7f7f7;
+}
+
+.text-content {
+    max-width: 50%;
+    padding: 20px;
+}
+
+.text-content p {
+    font-family: "Playwrite PL", cursive;
+    font-size: 1.5em;
+    color: #333;
+    margin: 0;
+}
+
+.text-content h1 {
+    font-family: "Playwrite PL", cursive;
+    font-size: 2.6em;
+    color: #333;
+    margin: 10px 0;
+}
+
+.text-content button {
+    font-family: "Noto Sans", sans-serif;
+    border-radius: 8%;
+    background-color: #ff6347;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 20px;
+    font-size: 0.8em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.text-content button:hover {
+    background-color: #e55342;
+}
+
+.img-content img {
+    max-width: 90%;
+    height: auto;
+    border-radius: 10px;
+}
+
+
+@media (max-width: 600px) {
+    .img-content {
+        max-width: 50%;
+    }
+    .text-content p{
+        font-size: 0.9em;
+    }
+    .text-content h1{
+        font-size: 1.6em;
+    }
+    .text-content button { 
+            padding: 8px 20px;
+      }
+}
+
+@media (max-width: 800px) {
+    .text-content p{
+        font-size: 0.8em;
+    }
+    .text-content h1{
+        font-size: 1em;
+    }
+    .text-content button{
+        padding: 8px 20px;
+        font-size: 0.4rem;
+    }
+}

@@ -1,0 +1,21 @@
+.not-found {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa; /* Light gray background */
+}
+
+.not-found h1 {
+    font-size: 3em;
+    margin-bottom: 0.5em;
+    color: #343a40; /* Dark gray text color */
+}
+
+.not-found p {
+    font-size: 1.5em;
+    color: #6c757d; /* Medium gray text color */
+}
