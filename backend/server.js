@@ -1,31 +1,28 @@
 const express = require('express');
-const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const User = require("./User");
 const Orders = require("./Orders")
 const cors = require('cors');
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcrypt');
-require("dotenv").config();
+const dotenv = require("dotenv");
 
-console.log(`Server is running on port ${process.env.PORT}`);
-
+dotenv.config();
 const app = express();
-const port = 5000;
-app.use(cors(
-  {
-    origin: "http://localhost:3000",
-  }
-));
-app.use(bodyParser.json());
+app.use(cors());
+app.use(express.json());
+
 mongoose.connect(process.env.MONGODB_URI).then(() => {
-  const PORT = process.env.PORT || 8000
-  app.listen(PORT,"152.58.198.188", () => {
-      console.log(`App is Listening on PORT ${PORT}`);
-  })
+  console.log("Connected to DB");
 }).catch(err => {
   console.log(err);
 });
+
+app.get('/', async (req, res) => {
+  console.log("working");
+   res.send("Hello")
+});
+
 
 app.post('/register', async (req, res) => {
   console.log("working");
@@ -152,4 +149,9 @@ app.post('/cart', async (req, res) => {
   } catch (error) {
       res.sendStatus(404);
   }
+});
+
+
+app.listen(process.env.PORT || 5000, () => {  
+  console.log(`App is Listening...`);
 });
