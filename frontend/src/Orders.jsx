@@ -11,6 +11,7 @@ function Orders() {
     const userId = localStorage.getItem('userId');
 
   useEffect(() => {
+      console.lgo(userId)
     const fetchOrders = async () => {
       try {
           console.log(userId)
