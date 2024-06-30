@@ -5,6 +5,7 @@ import Footer from "./Footer";
 import { Flip, toast } from "react-toastify";
 import { useHistory } from "react-router-dom/cjs/react-router-dom";
 import axios from 'axios';
+import { link } from "../public/address";
 
 function RegisterForm({ totalQuantity }) {
   const [formData, setFormData] = useState({
@@ -27,7 +28,7 @@ function RegisterForm({ totalQuantity }) {
 
         const resolveAfter1_5Sec = new Promise(async (resolve, reject) => {
             try {
-                const response = await axios.post('http://192.168.6.134:5000/register', {Email: formData.usrName,Password: formData.passWord});
+                const response = await axios.post(`${link}/register`, {Email: formData.usrName,Password: formData.passWord});
                 if (response.status === 200) {
                     resolve();
                   } else {
