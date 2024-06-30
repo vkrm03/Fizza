@@ -1,14 +1,17 @@
 import React from "react";
-import "./assets/Subcontent.css"
+import "./assets/Subcontent.css";
+import { Flip, toast } from 'react-toastify';
 
 function Subcontent() {
+  const history = useHistory();
+
   return (
     <div className="containers">
       <div className="main-contents">
         <div className="text-contents">
           <h1>Fastest Delivery<br />Easy Pickup</h1>
           <p className="subtext">When You Are Too Lazy To Cook, We Are Here For You</p>
-          <a href="/offers"><button> Get Offers</button></a>
+          <a onClick={() => history.push("/offers")}><button> Get Offers</button></a>
           <div className="stats">
             <div className="stat-item">
               <h2>2500+</h2>
