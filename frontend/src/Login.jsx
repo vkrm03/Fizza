@@ -23,7 +23,7 @@ function LoginForm({setIsLoggedIn, setIsAdmin}) {
         e.preventDefault();
         const resolveAfter1_5Sec = new Promise(async (resolve, reject) => {
             try {
-                const response = await axios.post(`http://${link}:5000/login`, {Email: formData.usrName,Password: formData.PassWord});
+                const response = await axios.post(`${link}/login`, {Email: formData.usrName,Password: formData.PassWord});
                 if (response.status === 200) {
                     localStorage.setItem('token', response.data.token);
                     localStorage.setItem('userId', response.data.id);
