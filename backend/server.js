@@ -69,6 +69,7 @@ app.get('/orders/:usrId', async (req, res) => {
 
 app.get('/orders/:orderId', async (req, res) => {
   const orderId = req.params.orderId;
+  console.log(orderId);
   try {
     const order = await Orders.findOne({ _id: orderId });
     if (!order) {
