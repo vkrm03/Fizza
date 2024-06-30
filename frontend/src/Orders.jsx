@@ -14,7 +14,7 @@ function Orders() {
     const fetchOrders = async () => {
       try {
           console.log("from" + userId)
-        const response = await axios.get(`${link}/order/${userId}`);
+        const response = await axios.get(`${link}/orders/${userId}`);
         if (response.status === 200) {
           setOrders(response.data);
         } else {
