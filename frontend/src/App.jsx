@@ -37,17 +37,17 @@ function App() {
             <div>
                 <Switch>
                     <Route path="/" exact component={() => <Home/> } />
-                    <Route path="/menu" component ={() => <Menuchat cartItems={cartItems} setCartItems={setCartItems}/>}/>
-                    <Route path="/offers" component={() => <Offer/>} />
+                    <Route path="/menu" exact component ={() => <Menuchat cartItems={cartItems} setCartItems={setCartItems}/>}/>
+                    <Route path="/offers" exact component={() => <Offer/>} />
                     <Route path="/orders" exact render={() => (
                         isLoggedIn ? (isAdmin ? <AdminOrders /> : <Orders />) : <Redirect to="/login" />
                     )} />
                     <Route path="/orders/:orderId" exact render={() => (
                         isLoggedIn ? (isAdmin ? <AdminOrdersDetails /> : <OrderDetail />) : <Redirect to="/login" />
                     )} />
-                    <Route path="/register" component={() => <RegisterForm/>}/>
-                    <Route path="/login" component={() => <LoginForm setIsLoggedIn={setIsLoggedIn} setIsAdmin={setIsAdmin}/>} />
-                    <Route path="/cart" component={() => <Cart cartItems={cartItems} clearCartItems={clearCartItems} isLoggedIn={isLoggedIn}/>} />
+                    <Route path="/register" exact component={() => <RegisterForm/>}/>
+                    <Route path="/login" exact component={() => <LoginForm setIsLoggedIn={setIsLoggedIn} setIsAdmin={setIsAdmin}/>} />
+                    <Route path="/cart" exact component={() => <Cart cartItems={cartItems} clearCartItems={clearCartItems} isLoggedIn={isLoggedIn}/>} />
                     <Route component={NotFound} />
 
                 </Switch>
