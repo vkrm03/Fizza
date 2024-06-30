@@ -27,7 +27,7 @@ app.get('/', async (req, res) => {
 });
 
 app.post('/register', async (req, res) => {
-  console.log("working");
+  console.log("working from reg");
   const usr = req.body;
   try {
     const user = await User.create({ Email: usr.Email, Password: usr.Password });
