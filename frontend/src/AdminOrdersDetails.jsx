@@ -12,6 +12,7 @@ function AdminOrdersDetails() {
         const fetchOrder = async () => {
             try {
                 const response = await axios.get(`${link}/orders/${orderId}`);
+                console.log(response)
                 if (response.status === 200) {
                     const foundOrder = response.data
                     if (foundOrder) {
