@@ -29,7 +29,7 @@ function AdminOrders() {
   const handleStatusChange = async (e, orderId) => {
     const selectedStatus = e.target.value;
     try {
-        const response = await axios.post(`http://${link}:5000/Admin/order`, {orderId:orderId,status:selectedStatus});
+        const response = await axios.post(`${link}/Admin/order`, {orderId:orderId,status:selectedStatus});
         if (response.status === 200) {
             console.log(response);
           }
