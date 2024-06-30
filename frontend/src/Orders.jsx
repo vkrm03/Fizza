@@ -13,6 +13,7 @@ function Orders() {
   useEffect(() => {
     const fetchOrders = async () => {
       try {
+          console.log(userId)
         const response = await axios.get(`${link}/${userId}`);
         if (response.status === 200) {
           setOrders(response.data);
@@ -25,6 +26,7 @@ function Orders() {
     };
 
     if (userId) {
+        console.log(userId)
       fetchOrders();
     }
   }, [userId]);
