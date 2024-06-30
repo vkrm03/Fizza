@@ -91,7 +91,7 @@ app.get('/Admin', async (req, res) => {
       res.status(200).json(order);
     }
   } catch (error) {
-    res.status(404).json({ error: 'No orders found for this user' });
+    res.status(404).json({ error: 'Error orders found for this user' });
   }
 });
 
