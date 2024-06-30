@@ -11,7 +11,7 @@ function AdminOrdersDetails() {
     useEffect(() => {
         const fetchOrder = async () => {
             try {
-                const response = await axios.get(`http://${link}:5000/order/${orderId}`);
+                const response = await axios.get(`${link}/${orderId}`);
                 if (response.status === 200) {
                     const foundOrder = response.data
                     if (foundOrder) {
