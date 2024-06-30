@@ -12,7 +12,7 @@ function OrderDetail() {
     useEffect(() => {
         const fetchOrder = async () => {
             try {
-                const response = await axios.get(`${link}/order/${userId}`);
+                const response = await axios.get(`${link}/orders/${userId}`);
                 if (response.status === 200) {
                     const foundOrder = response.data.find(order => order._id === orderId);
                     if (foundOrder) {
