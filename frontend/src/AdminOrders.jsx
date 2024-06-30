@@ -12,7 +12,7 @@ function AdminOrders() {
   useEffect(() => {
     const fetchOrders = async () => {
       try {
-        const response = await axios.get(`http://${link}:5000/Admin`);
+        const response = await axios.get(`${link}/Admin`);
         if (response.status === 200) {
           setOrders(response.data);
         } else {
