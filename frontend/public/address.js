@@ -1,3 +1,3 @@
-const link = "152.58.198.188"; 
+const link = "https://fizza-api.vercel.app/"; 
 
 export { link };
