@@ -1,6 +1,6 @@
 import React from "react";
 import "./assets/Subcontent.css";
-import { Flip, toast } from 'react-toastify';
+import { useHistory } from 'react-router-dom/cjs/react-router-dom.min';
 
 function Subcontent() {
   const history = useHistory();
