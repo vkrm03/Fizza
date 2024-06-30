@@ -16,7 +16,7 @@ function CartItems({cartItems, clearCartItems, isLoggedIn }) {
               const userId = localStorage.getItem('userId');
                 if (isLoggedIn) {
                   try {
-                    const response = await axios.post(`http://${link}:5000/cart`, {
+                    const response = await axios.post(`${link}/cart`, {
                       Address: address,
                       Phone: phn,
                       items: cartItems,
