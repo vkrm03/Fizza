@@ -11,12 +11,7 @@ dotenv.config();
 const app = express();
 
 // CORS configuration to allow all origins
-app.use(cors({
-  origin: '*', // Allow all origins
-  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE,OPTIONS',
-  preflightContinue: false,
-  optionsSuccessStatus: 204 // For legacy browser support
-}));
+app.use(cors());
 
 app.use(express.json());
 
