@@ -27,7 +27,7 @@ function LoginForm({setIsLoggedIn, setIsAdmin}) {
                 if (response.status === 200) {
                     localStorage.setItem('token', response.data.token);
                     localStorage.setItem('userId', response.data.id);
-                    if (response.data.id === "668174831af6eca40739c400") {
+                    if (response.data.id === "684beee6014d6309ed925cdc") {
                       setIsAdmin(true)
                       localStorage.setItem('isAdmin', true);
                     } else {
