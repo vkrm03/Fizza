@@ -23,7 +23,7 @@
 
 ---
 
-## 🚀 Live Demo
+## 🚀 Live Link
 
 🔗 [fizza-app.vercel.app](https://fizza-app.vercel.app)
 
